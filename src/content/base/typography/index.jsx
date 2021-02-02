@@ -32,6 +32,10 @@ const Type = styled.span`
     }
   }};
 `;
-export default function Typography({ children, variant,color }) {
-  return <Type variant={variant} color={color}>{children}</Type>;
+export default function Typography({ children, variant, color }) {
+  return (
+    <Type variant={variant} color={color}>
+      {children}
+    </Type>
+  );
 }
