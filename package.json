@@ -8,14 +8,21 @@
     "start": "next start"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "firebase": "^8.2.5",
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+<<<<<<< HEAD
     "sass": "^1.32.6",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "eslint": "^7.19.0",
     "eslint-plugin-react": "^7.22.0"
+=======
+    "sass": "^1.32.5",
+    "styled-components": "^5.2.1"
+>>>>>>> firebase
   }
 }
