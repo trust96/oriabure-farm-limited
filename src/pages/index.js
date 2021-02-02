@@ -1,11 +1,12 @@
-
-import React from 'react'
+import React from 'react';
 import Typography from '../content/base/typography';
 
 export default function index() {
-  return (
-    <div>
-      <Typography variant="primary" >this is good</Typography>
-    </div>
-  )
+    return (
+        <>
+            <Typography variant="primary" color="warning" weight="bold">
+                this is good
+            </Typography>
+        </>
+    );
 }
