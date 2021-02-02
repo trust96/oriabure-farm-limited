@@ -4,7 +4,7 @@ import Typography from '../content/base/typography';
 export default function index() {
     return (
         <>
-            <Typography variant="primary" color="warning" weight="bold">
+            <Typography variant="primary" color="warning">
                 this is good
             </Typography>
         </>
