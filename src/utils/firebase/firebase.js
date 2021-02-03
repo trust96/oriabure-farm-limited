@@ -1,4 +1,4 @@
-import firebase from 'firebase'
+import firebase from 'firebase/app'
 const firebaseConfig = {
     apiKey: "AIzaSyDxPJvql8GGrNO4Hf0-jZ5ZRIJtG-cy4wY",
     authDomain: "oriabure-farms-limited.firebaseapp.com",
@@ -8,7 +8,6 @@ const firebaseConfig = {
     appId: "1:500542830491:web:3b10e12d9449adbe29133e",
     measurementId: "G-3WH8D6YSCM"
   };
+  export default !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app(); 
 
-  const fb = firebase.initializeApp(firebaseConfig);
-
-  export default fb;
+ 
