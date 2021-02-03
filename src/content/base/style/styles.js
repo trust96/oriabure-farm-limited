@@ -1,8 +1,16 @@
 const mediaQuery = {
-  sm: "@media (min-width:576px)",
-  md: "@media (min-width:768px)",
-  lg: "@media (min-width:992px)",
-  xlg: "@media (min-width:1200px)",
+  up: {
+    sm: "@media (min-width:576px)",
+    md: "@media (min-width:768px)",
+    lg: "@media (min-width:992px)",
+    xlg: "@media (min-width:1200px)",
+  },
+  down: {
+    sm: "@media (max-width:576px)",
+    md: "@media (max-width:768px)",
+    lg: "@media (max-width:992px)",
+    xlg: "@media (max-width:1200px)",
+  },
 };
 const FONT_BASE = 1;
 const fontSize = {

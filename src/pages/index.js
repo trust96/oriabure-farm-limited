@@ -5,12 +5,12 @@ import Button from '../content/components/button';
 import signup from '../utils/auth/auth';
 import Menu from '../content/components/menu';
 import Navlist from '../content/modules/navlist';
-import Navbar from '../content/modules/navbar';
+import Nav from '../content/sections/nav';
 
 export default function index() {
     return (
         <>
-<Navbar/>
+<Nav/>
         </>
     );
 }

@@ -1,5 +1,6 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 import styled from 'styled-components'
+import { NavToggle } from '../../../utils/state management/store/nav-context';
 
 const Menucontent = styled.button `
 width:52px;
@@ -30,13 +31,17 @@ transform:translateY(8px) rotate(45deg);
     transform: translateY(-8px) rotate(-45deg);
 }
 `
-export default function Menu({}) {
-    const [toggle, setToggle] = useState(false)
+export default function Menu({className}) {
+    const [isToggle, setIsToggle]= useContext(NavToggle)
+    const handleNav = ()=>{
+        setIsToggle(prevstate=>!prevstate)
+
+    }
     return (
-        <Menucontent >
-            <Menuitem className={`${toggle && 'top'}`}/>
-            <Menuitem className={`${toggle && 'center'}`}/>
-            <Menuitem className={`${toggle && 'bottom'}`}/>
+        <Menucontent className={className} onClick={handleNav}>
+            <Menuitem className={`${isToggle && 'top'}`}/>
+            <Menuitem className={`${isToggle && 'center'}`}/>
+            <Menuitem className={`${isToggle && 'bottom'}`}/>
         </Menucontent>
     )
 }
