@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { NavigationToggle } from "../../../utils/state management/store/nav-context";
+import { NavigationToggle } from "../../../utils/state_management/store/nav-context";
 import Navbar from "../../modules/navbar";
+
 const S = {};
 S.Nav = styled.nav`
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -16,13 +17,13 @@ S.Nav = styled.nav`
 export default function Nav() {
   return (
     <>
-    <NavigationToggle>
-      <S.Nav>
+
+      <S.Nav>    <NavigationToggle>
         <div className="container-lg container-fluid">
           <Navbar />
-        </div>
+        </div>  </NavigationToggle>
       </S.Nav>
-    </NavigationToggle>
+  
     </>
   );
 }
