@@ -15,6 +15,7 @@ S.Nav = styled.nav`
 `;
 export default function Nav() {
   return (
+    <>
     <NavigationToggle>
       <S.Nav>
         <div className="container-lg container-fluid">
@@ -22,5 +23,6 @@ export default function Nav() {
         </div>
       </S.Nav>
     </NavigationToggle>
+    </>
   );
 }
