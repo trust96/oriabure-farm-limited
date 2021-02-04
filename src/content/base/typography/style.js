@@ -51,6 +51,16 @@ const Type = styled.span`
                 return 'var(--font-weight-bold)';
         }
     }};
+    margin:${({margin})=>{
+              switch (margin) {
+            case 'lg':
+                return '0 0 .25rem 0';
+            case 'md':
+                return '0 0 .75rem 0';
+            case 'sm':
+                return '0 0 1.25rem 0';
+        }  
+    }}
 `;
 
 export default Type;

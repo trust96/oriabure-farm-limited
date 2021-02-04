@@ -16,7 +16,7 @@ color:${({color})=>{
         case 'primary':
             return 'var(--white)';
         default:
-            return 'var(--primary-300)'
+            return 'var(--black)'
     }
 }};
 `;
@@ -43,3 +43,12 @@ padding:${({mobile})=>mobile?'var(--space-500) var(--space-400)':'var(--space-20
     background-color: ${({mobile})=>mobile? 'rgba(0,0,0,0.1)':''};
 }
 `;
+
+export const Indicator = styled.span `
+
+background-color:var(--primary-300);
+display:block;
+height:4px;
+position:absolute;
+transition: all linear 150ms;
+`

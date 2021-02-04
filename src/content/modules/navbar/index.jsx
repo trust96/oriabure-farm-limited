@@ -12,14 +12,14 @@ export default function Navbar({ className }) {
       <Container className={className}>
         <S.Logo variant="small" />
         <Wrapper>
-          <S.Navlist navText={navText} navlink={navTextLink} />
+          <S.Navlist />
           <S.Typography weight="bold"> Are you a member?</S.Typography>
           <S.Button variant="primary">Sign in</S.Button>
         </Wrapper>
         <S.Menu />
       </Container>
       <M.Container className={`${isToggle? '':'active'}`}>
-        <M.Navlist mobile navText={navText} navlink={navTextLink} />{" "}
+        <M.Navlist mobile />
         <M.Button variant="primary">Sign in</M.Button>
       </M.Container>
     </>
