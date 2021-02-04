@@ -44,9 +44,9 @@ export default function Menu({className}) {
 useEffect(()=>console.log(isToggle))
     return (
         <Menucontent className={className} onClick={handleNav}>
-            <Menuitem className={`${isToggle && 'top'}`}/>
-            <Menuitem className={`${isToggle && 'center'}`}/>
-            <Menuitem className={`${isToggle && 'bottom'}`}/>
+            <Menuitem className={`${isToggle?  'top':''}`}/>
+            <Menuitem className={`${isToggle?  'center' : ''}`}/>
+            <Menuitem className={`${isToggle?  'bottom': ''}`}/>
         </Menucontent>
     )
 }
