@@ -1,12 +1,14 @@
 import React,{useState} from "react";
 
 const NavToggle = React.createContext();
+
+
 const NavigationToggle = ({ children }) => {
-  const [isToggle, setisToggle] = useState(false);
+  const [isToggle, setIsToggle] = useState(false);
   return (
-    <NavigationToggle value={[isToggle, setisToggle]}>
+    <NavToggle.Provider value={[isToggle, setIsToggle]}>
       {children}
-    </NavigationToggle>
+    </NavToggle.Provider>
   );
 };
 

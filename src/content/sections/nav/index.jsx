@@ -17,13 +17,13 @@ S.Nav = styled.nav`
 export default function Nav() {
   return (
     <>
-
-      <S.Nav>    <NavigationToggle>
+<NavigationToggle>
+      <S.Nav>    
         <div className="container-lg container-fluid">
           <Navbar />
-        </div>  </NavigationToggle>
+        </div>  
       </S.Nav>
-  
+  </NavigationToggle>
     </>
   );
 }
