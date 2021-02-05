@@ -19,10 +19,14 @@ F.Nav = styled(Navlist)`
 F.Wrapper = styled.div`
 
 `;
+F.Footer = styled.footer `
+padding-top:var(--space-600);
+
+`
 export default function Footer() {
   return (
     <>
-      <footer className="pt-5 container">
+      <div className="pt-5 container">
           <div className="row">
         <Logo className="mr-4 mb-4 mb-md-0" variant="medium" />
         <F.Wrapper className="col-12 col-md-3 mb-4 mb-md-0">
@@ -41,7 +45,7 @@ export default function Footer() {
           <Typography as="p" variant="caption" >via della manaia 18, PT 51092</Typography>
         </F.Wrapper>
         </div>
-      </footer>
+      </div>
     </>
   );
 }

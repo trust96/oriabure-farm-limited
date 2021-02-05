@@ -54,7 +54,7 @@ M.Container = styled.div`
   background-color: var(--white);
   position: absolute;
   top: 0;
-  bottom: 0;
+height:100vh;
   right: 0;
   left: 0;
   padding-top: 70px;

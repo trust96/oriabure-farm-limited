@@ -1,14 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import useRouter from "next/router";
 import { List, ListItem, ListLink, Indicator } from "./styles";
+import { NavToggle } from "../../../utils/state_management/store/nav-context";
 
-export default function Navlist({ color, mobile, className, footer }) {
+export default function Navlist({ color, mobile, className, footer}) {
+  const [isToggle, setIsToggle] = useContext(NavToggle)
   const [left, setLeft] = useState(0);
   const [width, setWidth] = useState(0);
   const handleLink = (e) => {
     setWidth(e.target.offsetWidth);
     setLeft(e.target.offsetLeft);
+    setIsToggle(prevstate=>!prevstate)
   };
   const home = useRef(null);
   const about = useRef(null);
@@ -20,38 +23,38 @@ export default function Navlist({ color, mobile, className, footer }) {
       home.current.click();
     } else if (router.pathname === "/about_us") {
       about.current.click();
-    }else if (router.pathname === "/services") {
+    } else if (router.pathname === "/services") {
       services.current.click();
-    }else if (router.pathname === "/contact_us") {
+    } else if (router.pathname === "/contact_us") {
       contact.current.click();
     }
   }, []);
   return (
     <List color={color} className={className}>
-      <ListItem>
+      <ListItem mobile={mobile}>
         <Link href="/">
-          <ListLink ref={home} onClick={handleLink}>
+          <ListLink mobile={mobile} ref={home} onClick={handleLink}>
             home
           </ListLink>
         </Link>
       </ListItem>
-      <ListItem>
-        <Link href="/about_us">
-          <ListLink ref={about} onClick={handleLink}>
+      <ListItem mobile={mobile}>
+        <Link href="about_us">
+          <ListLink mobile={mobile} ref={about} onClick={handleLink}>
             about us
           </ListLink>
         </Link>
       </ListItem>
-      <ListItem>
+      <ListItem mobile={mobile}>
         <Link href="/services">
-          <ListLink ref={service} onClick={handleLink}>
+          <ListLink mobile={mobile} ref={service} onClick={handleLink}>
             services
           </ListLink>
         </Link>
       </ListItem>
-      <ListItem>
+      <ListItem mobile={mobile}>
         <Link href="contact_us">
-          <ListLink ref={contact} onClick={handleLink}>
+          <ListLink mobile={mobile} ref={contact} onClick={handleLink}>
             contact us
           </ListLink>
         </Link>

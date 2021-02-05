@@ -48,7 +48,9 @@ export const Indicator = styled.span `
 
 background-color:var(--primary-300);
 display:block;
-height:4px;
+height:5px;
 position:absolute;
 transition: all linear 150ms;
+border-radius:var(--border-radius-lg);
+bottom:0;
 `

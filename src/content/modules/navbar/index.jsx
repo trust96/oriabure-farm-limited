@@ -2,10 +2,8 @@ import React,{useContext} from "react";
 import { NavToggle } from "../../../utils/state_management/store/nav-context";
 import {Container,Wrapper,M,S} from './styles'
 
-const navText = ["home", "about us", "services", "contact us"];
-const navTextLink = ["home", "about_us", "services", "contact_us"];
 export default function Navbar({ className }) {
-  const [isToggle] = useContext(NavToggle)
+  const [isToggle,setIsToggle] = useContext(NavToggle)
   return (
     <>
 

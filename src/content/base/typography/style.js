@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
 const Type = styled.span`
+&::after{
+    display:${(({variant})=> variant==='secondary'?'block':'none' )};
+    content:'';
+    height: 4px;
+    width:50%;
+    background-color: var(--primary-200);
+
+}
     font-size: ${({ variant }) => {
         switch (variant) {
             case 'primary':
@@ -39,7 +47,7 @@ const Type = styled.span`
                 return 'var(--warning-300)';
         }
     }};
-    text-transform: capitalize;
+    text-transform:${transform=>transform==="normal"?'none': 'capitalize'};
     line-height: var(--line-height-sm);
     font-weight: ${({ weight }) => {
         switch (weight) {
@@ -53,14 +61,32 @@ const Type = styled.span`
     }};
     margin:${({margin})=>{
               switch (margin) {
-            case 'lg':
+            case 'sm':
                 return '0 0 .25rem 0';
             case 'md':
                 return '0 0 .75rem 0';
-            case 'sm':
+            case 'lg':
                 return '0 0 1.25rem 0';
         }  
-    }}
+    }};
+        line-height:${({lineheight})=>{
+              switch (lineheight) {
+            case 'lg':
+                return 'var(--line-height-lg)';
+            case 'md':
+                return 'var(--line-height-md)';
+            case 'sm':
+                return 'var(--line-height-sm)';
+        }  
+    }};
+    text-align: ${({variant})=>variant==='secondary'? 'center': 'left'};
+    display: ${({variant})=>variant==='secondary'&& 'inline-block'};
+    position: ${({variant})=>variant==='secondary' && 'relative'};
+    left: ${({variant})=>variant==='secondary' && '50%'};
+    transform: ${({variant})=>variant==='secondary' && 'translateX(-50%)'};
+
+
+
 `;
 
 export default Type;
