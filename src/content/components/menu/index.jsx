@@ -1,6 +1,6 @@
 import React,{useContext, useEffect, useState} from 'react'
 import styled from 'styled-components'
-import { NavToggle } from '../../../utils/state_management/store/nav-context';
+import { NavToggle } from '../../../utils/state_management/nav-context';
 
 const Menucontent = styled.button `
 width:52px;

@@ -45,7 +45,7 @@ export default function Header() {
       <H.Container className="container-md container-fluid">
         <div className="row">
           <H.Wrapper className="col col-md-8">
-            <Typography as="h1" variant="primary" color="primary" margin="lg">
+            <Typography as="h1" variant="primary" color="primary" margin="lg" weight="bold">
               Taking Nigeria agriculture to the next level
             </Typography>
             <Typography

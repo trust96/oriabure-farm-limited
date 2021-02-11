@@ -16,7 +16,7 @@ color:${({color})=>{
         case 'primary':
             return 'var(--white)';
         default:
-            return 'var(--black)'
+            return 'var(--primary-300)'
     }
 }};
 `;
@@ -41,6 +41,7 @@ padding:${({mobile})=>mobile?'var(--space-500) var(--space-400)':'var(--space-20
 
 &:hover{
     background-color: ${({mobile})=>mobile? 'rgba(0,0,0,0.1)':''};
+    color:var(--primary-400)
 }
 `;
 

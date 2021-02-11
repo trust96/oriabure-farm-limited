@@ -71,6 +71,7 @@ const Btn = styled.button`
     }};
    
     }
+    width:${({fullwidth})=>fullwidth==="true" && '100%'}
 `;
 
 export default Btn

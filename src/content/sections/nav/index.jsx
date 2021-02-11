@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { NavigationToggle } from "../../../utils/state_management/store/nav-context";
 import Navbar from "../../modules/navbar";
 
 const S = {};
