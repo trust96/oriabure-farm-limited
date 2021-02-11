@@ -2,11 +2,11 @@ import {useState,useEffect} from 'react'
 import firebase from '../firebase/firebase'
 import 'firebase/auth'
 
-const auth = firebase.auth();
+export const auth = firebase.auth();
 
 const signin=( username, password)=>{
-const email=`${username}@domain.com`
-   auth.signInWithEmailAndPassword(email,password)
+const email=`${username}@hotmail.it`
+   auth.signInWithEmailAndPassword(email,password).then(console.log(auth.currentUser))
    
 }
 export const useAuth = ()=>{
